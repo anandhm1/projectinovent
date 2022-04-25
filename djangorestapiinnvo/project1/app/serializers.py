@@ -11,7 +11,7 @@ class ComplanySerilizer(serializers.ModelSerializer):
     def validate_Company_Name(self,value):
       value1 = len(value)
       print(value1)
-      if value1>5:
+      if value1<5:
           raise serializers.ValidationError("Comapany Name should not less than 5 characters")
       return value
 
